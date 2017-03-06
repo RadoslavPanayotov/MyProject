@@ -22,14 +22,9 @@ function inputToParagraph() {
 
 // TASK 3
 function justcause(array) {
-    var index = 0;
-    while ((Array.isArray(array[index]) && array[index].length > 1)) {
-        justcause(array[index]);
-        index++
-    }
         var parent = document.createElement("DIV");
         document.body.appendChild(parent);
-    for (; index < array.length; index++) {
+    for (var index = 0; index < array.length; index++) {
         if (Array.isArray(array[index]) && array[index].length >= 1) {
             justcause(array[index]);
             continue;
